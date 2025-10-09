@@ -14,5 +14,5 @@ date: 2025-10-09
 ![얕은 복사 폴더 캡처](/assets/images/shallow-copy/shallow_copy_files.png)
 <small>아직도 내 폴더에도 그 때의 날짜가 그대로다</small>
 
-![얕은 복사 보고서](/assets/pdfs/shallow-copy/About_shallow_Copying.pdf)
+![얕은 복사 보고서](/assets/pdfs/shallow-copy/About_Shallow_Copying.pdf)
 <small>그 때 그 보고서다, 깃허브 블로그에는 파일명에 공백이 불가해 바꿨다</small>
