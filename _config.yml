@@ -4,3 +4,7 @@ author: "JungWon Sohn(David Sohn)"
 theme: minima
 baseurl: "" 
 url: "https://davidsohn-yonsei.github.io"
+
+
+include:
+  - assets/codes/
