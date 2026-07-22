@@ -3,11 +3,11 @@
 #include <random>
 
 
-std::mt19937 gen[500];
-uint32_t range[500];
+std::mt19937 gen[100'000];
+uint32_t range[100'000];
 
-std::mt19937 gen_dice[500];
-uint32_t dice[500];
+std::mt19937 gen_dice[100'000];
+uint32_t dice[100'000];
 
 
 
@@ -54,7 +54,7 @@ int main()
     uint32_t result = 0;
 
 
-	for (int k = 0; k < 500; k++){
+	for (int k = 0; k < 100'000; k++){
         uint32_t p = static_cast<uint32_t>(
             std::chrono::high_resolution_clock::now().time_since_epoch().count()
 	    );
@@ -81,7 +81,7 @@ int main()
 
 
     auto start_old = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 100'000; i++) {
         // 32 bits random maximum
         result += oldRand(i, range[i]);
     }
@@ -89,9 +89,8 @@ int main()
     auto total_old = std::chrono::duration_cast<std::chrono::nanoseconds>(end_old - start_old).count();
 
 
-
     auto start_new = std::chrono::high_resolution_clock::now();
-    for (int j = 0; j < 500; j++) {
+    for (int j = 0; j < 100'000; j++) {
         result += newRand(dice[j], range[j]);
     }
     auto end_new = std::chrono::high_resolution_clock::now();
@@ -99,7 +98,7 @@ int main()
 
 
 
-    std::cout << "============= 500 times =============" << std::endl;
+    std::cout << "============= 100,000 times =============" << std::endl;
     std::cout << "1. oldRand : " << total_old << " ns" << std::endl;
     std::cout << "2. newRand: " << total_new << " ns" << std::endl;
     std::cout << "================================================" << std::endl;
